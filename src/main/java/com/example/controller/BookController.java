@@ -5,7 +5,6 @@ import com.example.exception.BookNotFoundException;
 import com.example.service.BookService;
 
 import org.springdoc.api.annotations.ParameterObject;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +17,6 @@ public class BookController {
 
     private final BookService bookService;
 
-    @Autowired
     public BookController(BookService bookService) {
         this.bookService = bookService;
     }

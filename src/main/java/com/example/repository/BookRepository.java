@@ -5,9 +5,10 @@ import java.util.Optional;
 import com.example.domain.Book;
 
 import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
-public interface BookRepository extends PagingAndSortingRepository<Book, String> {
+public interface BookRepository extends PagingAndSortingRepository<Book, String>, CrudRepository<Book, String> {
 
     Optional<Book> findBookByIsbn(String isbn);
 

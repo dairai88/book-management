@@ -5,7 +5,6 @@ import java.util.Optional;
 import com.example.domain.Book;
 import com.example.repository.BookRepository;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -15,12 +14,11 @@ public class BookService {
     
     private final BookRepository repository;
 
-    @Autowired
     public BookService(BookRepository repository) {
         this.repository = repository;
     }
 
-    public Optional<Book> findById(String id) {
+    public Optional<Book> findById(String id) { 
         return this.repository.findById(id);
          
     }
